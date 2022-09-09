@@ -1,6 +1,10 @@
 <div class="container'">
   <h5> <%= current_user.email %></h5>
 
+  <% if @single_room %>
+    <%= @single_room.name %>
+  <% end %>
+
   <h4>Users</h4>
   <%= turbo_stream_from "users" %>
   <div id="users">
